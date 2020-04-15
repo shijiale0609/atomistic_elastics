@@ -10,4 +10,8 @@ Juan J. de Pablo and Jonathan K. Whitmer.
 
 The **bulk** folder contains an equilibrated configuration used for bulk 
 elastic measurements (k_ii). The **cylinder** folder contains an equilibrated
-configuration of cylindrically confined 5CB for k_24 measurements. 
+configuration of cylindrically confined 5CB for k_24 measurements.
+
+## The update between this repo and https://github.com/hsidky/atomistic_elastics.git
+This repo uses ABF (Adaptive Biasing Force Algorithm) instead of BFS (Basis Function Sampling) for calculating elastic constants (gen_elastic_runs.py). 
+ 
