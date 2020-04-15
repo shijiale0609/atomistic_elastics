@@ -15,7 +15,7 @@ cdir = path.dirname(path.abspath(__file__))
 gmx = path.join(cdir, 'gmx')
 
 # - Number of walkers to use 
-nwalkers = 4 
+nwalkers = 1
 
 # - Task file containing prefixes for JSON files
 taskfile = 'args.list'
@@ -108,23 +108,26 @@ constraint["log_frequency"] = int(1000)
 root["constraints"].append(constraint)
 
 root["method"] = {}
-root["method"]["type"] = "Basis"
-root["method"]["cycle_frequency"] = int(10000000)
+root["method"]["type"] = "ABF"
+root["method"]["CV_lower_bounds"] = [-0.3]
+root["method"]["CV_upper_bounds"] = [0.3]
+root["method"]["CV_bins"] = [100]
+root["method"]["CV_restraint_minimums"] = [-0.33]
+root["method"]["CV_restraint_maximums"] = [0.33]
+root["method"]["CV_restraint_spring_constants"] = [100000]
+root["method"]["timestep"] = 0.002
+root["method"]["minimum_count"] = 1000
+root["method"]["filename"] = "F_out"
+root["method"]["backup_frequency"] = 1000
+root["method"]["unit_conversion"] = 1
 root["method"]["frequency"] = int(1)
-root["method"]["weight"] = 1.0 
-root["method"]["CV_coefficients"] = [int(2)]
-root["method"]["CV_restraint_spring_constants"] = [0]
-root["method"]["CV_restraint_minimums"] = [-0.52]
-root["method"]["CV_restraint_maximums"] = [0.52]
-root["method"]["tolerance"] = 1e-6
-root["method"]["convergence_exit"] = True
 
 # Add grid 
-root["grid"] = {}
-root["grid"]["lower"] = [-0.3]
-root["grid"]["upper"] = [0.3]
-root["grid"]["number_points"] = [100]
-root["grid"]["periodic"] = [False]
+#root["grid"] = {}
+#root["grid"]["lower"] = [-0.3]
+#root["grid"]["upper"] = [0.3]
+#root["grid"]["number_points"] = [100]
+#root["grid"]["periodic"] = [False]
 
 # Get list of file prefixes from taskfile.
 fnames = sorted([line.rstrip('\n') for line in open(path.join(args.s, taskfile), "r").readlines()])
