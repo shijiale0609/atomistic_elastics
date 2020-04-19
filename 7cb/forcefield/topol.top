@@ -1,0 +1,8 @@
+#include "ffnonbonded.itp"
+#include "7CB.itp"
+
+[system]
+Bulk 7CB 
+
+[molecules]
+CB7        400
