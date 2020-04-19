@@ -1,0 +1,8 @@
+#include "ffnonbonded.itp"
+#include "6CB.itp"
+
+[system]
+Bulk 6CB 
+
+[molecules]
+CB6        400
