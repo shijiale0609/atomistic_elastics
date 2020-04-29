@@ -1,17 +1,17 @@
 ; Run control
-integrator  = sd
+integrator  = md
 tinit       = 0
-nsteps      = 100000000
-dt          = 0.002
+nsteps      = 60000000
+dt          = 0.001
 comm_mode   = Linear
 nstcomm     = 1000
 
 ; Ouput control
-nstxout     = 20000
-nstvout     = 20000
-nstfout     = 20000
-nstxtcout   = 20000
-nstenergy   = 20000
+nstxout     = 30000
+nstvout     = 30000
+nstfout     = 30000
+nstxtcout   = 30000
+nstenergy   = 30000
 
 ; General options
 continuation = no
@@ -20,7 +20,7 @@ gen-vel      = no
 
 ; Neighbor list options
 cutoff-scheme = Verlet
-nstlist       = 20
+nstlist       = 10
 ns-type       = grid
 
 ; Electrostatics
@@ -35,7 +35,7 @@ pme-order        = 4
 vdwtype      = Cut-off
 vdw-modifier = Potential-shift-Verlet
 rvdw         = 1.0
-DispCorr     = No
+DispCorr     = no
 
 ; Thermostat
 tcoupl          = Nose-hoover
@@ -48,6 +48,6 @@ nh-chain-length = 1
 pcoupl          = Parrinello-Rahman
 pcoupltype      = isotropic
 ref-p           = 1.0
-tau-p           = 5.0   
+tau-p           = 1.0   
 compressibility = 4.5e-5
 
