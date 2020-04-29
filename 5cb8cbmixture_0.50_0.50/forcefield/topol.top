@@ -1,0 +1,10 @@
+#include "ffnonbonded.itp"
+#include "8CB.itp"
+#include "5CB.itp"
+
+[system]
+Bulk 5CB&8CB 
+
+[molecules]
+CB8        200
+CB5        200
