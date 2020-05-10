@@ -214,8 +214,8 @@ for fname in fnames:
         
         # Mode specific JSON.
         root["constraints"][0]["file_name"] = "{0}-umbrella.dat".format(fname)
-        root["method"]["basis_filename"] = fname
-        root["method"]["coeff_filename"] = fname
+        #root["method"]["basis_filename"] = fname
+        #root["method"]["coeff_filename"] = fname
 
         # - First CV is the central region. 
         root["CVs"][0]["director"] = director
