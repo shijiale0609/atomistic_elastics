@@ -1,0 +1,3 @@
+module load cmake boost intel/19.0
+cmake ..   -DGROMACS=YES -DGMX_BUILD_OWN_FFTW=ON  -DCMAKE_CXX_COMPILER=/opt/crc/i/intel/19.0/bin/icpc -DCMAKE_C_COMPILER=/opt/crc/i/intel/19.0/bin/icc  \
+ -DBoost_LIBRARIES="/opt/crc/b/boost/1.70/gcc/lib/libboost_mpi.so;/opt/crc/b/boost/1.70/gcc/lib/libboost_serialization.so"
