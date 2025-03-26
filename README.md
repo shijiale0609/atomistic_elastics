@@ -1,7 +1,11 @@
 # atomistic_elastics
 This repository contains supplementary forcefields, topologies, and runfiles in the paper 
+
+**Automated determination of n-cyanobiphenyl and n-cyanobiphenyl binary mixtures elastic constants in the nematic phase from molecular simulation** by Jiale Shi, Hythem Sidky, Jonathan K Whitmer Mol. Syst. Des. Eng., 2020, 5, 1131-1136 [Link](https://pubs.rsc.org/en/content/articlehtml/2020/me/c9me00065h)
+
 **In Silico Measurement of Elastic Moduli of Nematic Liquid Crystals** by Hythem Sidky,
 Juan J. de Pablo and Jonathan K. Whitmer. 
+
 
 ## What's inside? 
 - Gromacs topologies, configurations, and run parameters.
